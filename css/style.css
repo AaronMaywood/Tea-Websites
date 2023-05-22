@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*
+CSS カスタムプロパティを使用してよく使う値を定義
+https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
+*/
+:root {
+	--dark-green: #030;
+}
+
+a {
+	text-decoration: none;
+	color: var(--dark-green);
+}
+
+a.current {
+	text-decoration: underline;
+	color: #b27616;
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1, h2, h3 {
+	color: var(--dark-green);
+}
+
+html {
+	background: #608862;
+}
+
+body {
+	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
+	margin: 0 auto;
+	width: 1100px;
+	height: auto;	/* TODO リセットCSSの設定値、 height:100% をリセットしなければ背景色が画面の高さでとどまってしまう。このリセットCSSは使いにくいかも...?まあ、トラブルシューティングの練習になるし、最悪は div.wrapper でくるめばよいからこのままでもイキかな. */
+	background-color: #fff;
+}
+
+header h1,
+header nav,
+footer .sitename {
+	font-family: 'Noto Serif JP', serif;
+}
+
+header .line-1st {
+	padding: 20px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .line-1st h1 {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+header .line-1st ul {
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+header .key-visual {
+	padding: 20px 80px 100px;
+	background: url('../images/visual_img_01.png');
+	color: white;
+}
+
+.main-layout-col2 {
+	margin: 40px 40px;
+	display: flex;
+	gap: 20px;
+}
+
+.main-layout-col2 main {
+	flex: 4;
+}
+
+.main-layout-col2 aside {
+	flex: 1;
+}
+
+main section {
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+main h2 {
+	margin-left: -50px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+main .tea-images {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+main section .layout-col2 {
+	display: flex;
+	gap: 20px;
+}
+
+main section .layout-col2 .col1 {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+main section .layout-col2 figure {
+	flex: 260px 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+main section .layout-col2 .refer {
+	margin-top: 40px;
+}
+
+dl.info {
+	border: 1px solid var(--dark-green);
+	padding: 20px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+dl.info div {
+	border-bottom: 1px dashed var(--dark-green);
+	display: flex;
+}
+
+footer {
+	padding: 20px 40px;
+	background: var(--dark-green);
+	color: white;
+}
+
+footer .line-1st {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+footer .sitename {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+footer .line-1st ul {
+	display: flex;
+	gap: 16px;
+}
+
+footer .line-1st ul a {
+	color: white;
+}
+
+footer .tel {
+	display: flex;
+	align-content: center;
+}
