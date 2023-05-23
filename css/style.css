@@ -6,6 +6,7 @@ https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
 */
 :root {
 	--dark-green: #030;
+	--light-green: #608862;
 }
 
 a {
@@ -27,7 +28,7 @@ h1, h2, h3 {
 }
 
 html {
-	background: #608862;
+	background: var(--light-green);
 }
 
 body {
@@ -60,7 +61,20 @@ header .line-1st h1 {
 header .line-1st ul {
 	display: flex;
 	justify-content: space-between;
-	gap: 24px;
+	gap: 12px;
+}
+
+.line-1st nav li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.line-1st nav .vertical-rule {
+	margin-top: 3px;
+	width: 1px;
+	height: 20px;
+	border-left: 1px solid var(--dark-green);
 }
 
 header .key-visual {
@@ -211,4 +225,36 @@ main header {
 	padding-bottom: 40px;
 	border: 1px solid black;
 	box-shadow: 2px 2px 3px gray;
+}
+
+/*----- catalog.html -----*/
+
+.showcase {
+	display: flex;
+	gap: 40px 10px;
+	flex-wrap: wrap;
+}
+
+.showcase .vertical-rule {
+	width: 1px;
+	height: 450px;
+	border-left: 1px solid #ddd;
+}
+
+.card-catalog {
+	flex: 230px 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-catalog h3 {
+	width: 100%;
+	text-align: center;
+	background: var(--light-green);
+	color: white;
+}
+
+.refer-catalog {
+	margin-top: 40px;
 }
