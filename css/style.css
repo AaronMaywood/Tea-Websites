@@ -294,4 +294,83 @@ header .key-visual.common {
 	color: royalblue;
 }
 
+/*----- contact.html -----*/
+
+header .key-visual.contact {
+	background: url('../images/visual_img_05.jpg');
+}
+
+.contact form {
+	border: 1px solid var(--dark-green);
+}
+
+.contact  dl {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	align-items: center;
+}
+
+.contact dl dt {
+	padding: 8px;
+	height: 100%;
+	border-bottom: 1px solid white;
+	background: var(--light-green);
+	color: white;
+	/* 縦方向に中央寄せするために、flex を使用 */
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+.contact dl dt:nth-child(13) {
+	/* 最後尾のdtのみ色を変える */
+	border-bottom: 1px solid var(--dark-green);
+}
+
+.contact dl dd {
+	padding: 8px 16px;
+	border-bottom: 1px solid var(--dark-green);
+}
+
+.contact dl dd .email-line-1st {
+	margin-bottom: 8px;
+}
+
+.contact input[type=text],
+.contact input[type=email] {
+	width: 400px;
+}
+
+.contact textarea {
+	width: 400px;
+}
+
+.contact .re-entry {
+	margin-left: 16px;
+	color: red;
+	font-weight: normal;
+}
+
+.contact ul {
+	padding: 0;
+	display: flex;
+	gap: 24px;
+}
+
+.contact .form-functions {
+	padding: 16px;
+	text-align: center;
+}
+
+.contact .form-functions input[type=submit],
+.contact .form-functions input[type=reset] {
+	padding: 4px 32px;
+}
+
+aside.green-tea-plantation {
+	width: 244px;
+	height: auto;
+	background: url('../images/aside_bg.jpg');
+	background-size: cover;
+}
 
