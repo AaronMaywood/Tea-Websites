@@ -65,7 +65,7 @@ header .line-1st ul {
 
 header .key-visual {
 	padding: 20px 80px 100px;
-	background: url('../images/visual_img_01.png');
+	background: url('../images/visual_img_01.jpg');
 	color: white;
 }
 
@@ -75,7 +75,7 @@ header .key-visual {
 	gap: 20px;
 }
 
-main section {
+main > section {
 	margin-left: 50px;
 	margin-bottom: 20px;
 }
@@ -180,4 +180,35 @@ footer .copyright {
 	border-top: 1px solid white;
 	text-align: center;
 	font-size: 24px;
+}
+
+/*----- tool.html -----*/
+
+header .key-visual.tool {
+	background: url('../images/visual_img_02.jpg');
+}
+
+main header {
+	margin-bottom: 32px;
+}
+
+.card-tool h3 {
+	margin-left: -20px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.card-tool p {
+	margin: 20px 0;
+	display: flex;
+	gap: 20px;
+}
+
+.card-tool p img {
+	box-sizing: content-box;	/* reset.css の box-sizing: border-box; を上書き */
+	padding: 20px;
+	padding-bottom: 40px;
+	border: 1px solid black;
+	box-shadow: 2px 2px 3px gray;
 }
