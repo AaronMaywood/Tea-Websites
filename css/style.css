@@ -75,14 +75,6 @@ header .key-visual {
 	gap: 20px;
 }
 
-.main-layout-col2 main {
-	flex: 4;
-}
-
-.main-layout-col2 aside {
-	flex: 1;
-}
-
 main section {
 	margin-left: 50px;
 	margin-bottom: 20px;
@@ -122,7 +114,7 @@ main section .layout-col2 .refer {
 	margin-top: 40px;
 }
 
-dl.info {
+main dl.info {
 	border: 1px solid var(--dark-green);
 	padding: 20px 20px;
 	display: flex;
@@ -130,9 +122,17 @@ dl.info {
 	gap: 10px;
 }
 
-dl.info div {
+main dl.info div {
 	border-bottom: 1px dashed var(--dark-green);
 	display: flex;
+}
+
+aside {
+	flex: 180px 0 0;
+	margin-top: 45px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 footer {
@@ -165,7 +165,19 @@ footer .line-1st ul a {
 	color: white;
 }
 
+footer address {
+	margin: 20px 50px;
+	font-style: normal;
+}
+
 footer .tel {
 	display: flex;
-	align-content: center;
+	align-items: center;
+	gap: 6px;
+}
+
+footer .copyright {
+	border-top: 1px solid white;
+	text-align: center;
+	font-size: 24px;
 }
