@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* 共通基盤(ベーススタイル) */
+
 /*
 CSS カスタムプロパティを使用してよく使う値を定義
 https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
@@ -39,6 +41,8 @@ header nav,
 footer .sitename {
 	font-family: 'Noto Serif JP', serif;
 }
+
+/* ベーススタイルここまで */
 
 .header__line-1st {
 	padding: 20px 40px;
@@ -100,7 +104,9 @@ footer .sitename {
 	padding-left: 48px;
 }
 
-.heading {
+.contents__heading {
+	margin-left: -50px;
+	padding-left: 50px;
 	background: url('../images/h2_img.png') no-repeat 0 5px;
 	display: flex;
 	align-items: center;
@@ -111,18 +117,18 @@ footer .sitename {
 	margin-bottom: 20px;
 }
 
-.contents__layout-col2 {
+.contents__layout-columns {
 	display: flex;
 	gap: 20px;
 }
 
-.contents__col1 {
+.contents__layout-col1 {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-.contents__figure {
+.contents__layout-col2 {
 	flex: 260px 0 0;
 	display: flex;
 	flex-direction: column;
@@ -186,7 +192,7 @@ footer .sitename {
 	gap: 16px;
 }
 
-.footer___nav a {
+.footer__nav_a {
 	color: white;
 }
 
@@ -305,7 +311,7 @@ footer .sitename {
 	text-align: right;
 }
 
-.back-to-top a {
+.back-to-top__a {
 	color: royalblue;
 }
 
@@ -337,7 +343,7 @@ footer .sitename {
 	justify-content: end;
 }
 
-.contact__keyword:nth-child(13) {
+.contact__keyword--last {
 	/* 最後尾のdtのみ色を変える */
 	border-bottom: 1px solid var(--dark-green);
 }
@@ -388,4 +394,3 @@ footer .sitename {
 	background: url('../images/aside_bg.jpg');
 	background-size: cover;
 }
-
