@@ -14,11 +14,6 @@ a {
 	color: var(--dark-green);
 }
 
-a.current {
-	text-decoration: underline;
-	color: #b27616;
-}
-
 ul {
 	list-style-type: none;
 }
@@ -35,7 +30,7 @@ body {
 	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
 	margin: 0 auto;
 	width: 1100px;
-	height: auto;	/* TODO リセットCSSの設定値、 height:100% をリセットしなければ背景色が画面の高さでとどまってしまう。このリセットCSSは使いにくいかも...?まあ、トラブルシューティングの練習になるし、最悪は div.wrapper でくるめばよいからこのままでもイキかな. */
+	height: auto;	/* リセットCSSの height:100% を上書き */
 	background-color: #fff;
 }
 
@@ -45,124 +40,140 @@ footer .sitename {
 	font-family: 'Noto Serif JP', serif;
 }
 
-header .line-1st {
+.header__line-1st {
 	padding: 20px 40px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-header .line-1st h1 {
+.header__logo {
 	display: flex;
 	align-items: center;
 	gap: 16px;
 }
 
-header .line-1st ul {
+.nav {
 	display: flex;
 	justify-content: space-between;
 	gap: 12px;
 }
 
-.line-1st nav li {
+.nav__item {
 	display: flex;
 	align-items: center;
 	gap: 12px;
 }
 
-.line-1st nav .vertical-rule {
+.nav__item--current a {
+	text-decoration: underline;
+	color: #b27616;
+}
+
+.nav__vertical-rule {
 	margin-top: 3px;
 	width: 1px;
 	height: 20px;
 	border-left: 1px solid var(--dark-green);
 }
 
-header .key-visual {
+.header__key-visual {
 	padding: 20px 80px 100px;
 	background: url('../images/visual_img_01.jpg');
 	color: white;
 }
 
-.main-layout-col2 {
+.contents-area {
 	margin: 40px 40px;
 	display: flex;
 	gap: 20px;
 }
 
-main > section {
+.contents-area__contents {
 	margin-left: 50px;
 	margin-bottom: 20px;
 }
 
-main h2 {
+.contents__header {
 	margin-left: -50px;
 	margin-bottom: 10px;
+	padding-left: 48px;
+}
+
+.heading {
+	background: url('../images/h2_img.png') no-repeat 0 5px;
 	display: flex;
 	align-items: center;
 }
 
-main .tea-images {
+.tea-images {
 	display: flex;
 	margin-bottom: 20px;
 }
 
-main section .layout-col2 {
+.contents__layout-col2 {
 	display: flex;
 	gap: 20px;
 }
 
-main section .layout-col2 .col1 {
+.contents__col1 {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-main section .layout-col2 figure {
+.contents__figure {
 	flex: 260px 0 0;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-main section .layout-col2 .refer {
+.contents__refer {
 	margin-top: 40px;
 }
 
-main dl.info {
-	border: 1px solid var(--dark-green);
+.contents__info {
 	padding: 20px 20px;
+}
+
+.info {
+	border: 1px solid var(--dark-green);
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-main dl.info div {
+.info__item {
 	border-bottom: 1px dashed var(--dark-green);
 	display: flex;
 }
 
-aside {
-	flex: 180px 0 0;
+.contents-area__aside {
 	margin-top: 45px;
+	flex: 180px 0 0;
+}
+
+.aside {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 }
 
-footer {
+.footer {
 	padding: 20px 40px;
 	background: var(--dark-green);
 	color: white;
 }
 
-footer .line-1st {
+.footer__line-1st {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 8px;
 }
 
-footer .sitename {
+.footer__sitename {
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -170,27 +181,27 @@ footer .sitename {
 	font-weight: bold;
 }
 
-footer .line-1st ul {
+.footer__nav {
 	display: flex;
 	gap: 16px;
 }
 
-footer .line-1st ul a {
+.footer___nav a {
 	color: white;
 }
 
-footer address {
+.footer__address {
 	margin: 20px 50px;
 	font-style: normal;
 }
 
-footer .tel {
+.footer__tel {
 	display: flex;
 	align-items: center;
 	gap: 6px;
 }
 
-footer .copyright {
+.footer__copyright {
 	border-top: 1px solid white;
 	text-align: center;
 	font-size: 24px;
@@ -198,28 +209,30 @@ footer .copyright {
 
 /*----- tool.html -----*/
 
-header .key-visual.tool {
+.header__key-visual--tool {
 	background: url('../images/visual_img_02.jpg');
 }
 
-main header {
+.contents__header--tool {
 	margin-bottom: 32px;
 }
 
-.card-tool h3 {
+.card-tool__heading {
 	margin-left: -20px;
+	padding-left: 20px;
+	background: url('../images/h3_img.gif') no-repeat 0 4px;
 	display: flex;
 	align-items: center;
 	gap: 8px;
 }
 
-.card-tool p {
+.card-tool__desctiption {
 	margin: 20px 0;
 	display: flex;
 	gap: 20px;
 }
 
-.card-tool p img {
+.card-tool__image {
 	box-sizing: content-box;	/* reset.css の box-sizing: border-box; を上書き */
 	padding: 20px;
 	padding-bottom: 40px;
@@ -229,7 +242,7 @@ main header {
 
 /*----- catalog.html -----*/
 
-header .key-visual.catalog {
+.header__key-visual--catalog {
 	background: url('../images/visual_img_03.jpg');
 }
 
@@ -239,7 +252,7 @@ header .key-visual.catalog {
 	flex-wrap: wrap;
 }
 
-.showcase .vertical-rule {
+.showcase__vertical-rule {
 	width: 1px;
 	height: 450px;
 	border-left: 1px solid #ddd;
@@ -252,36 +265,38 @@ header .key-visual.catalog {
 	align-items: center;
 }
 
-.card-catalog h3 {
+.card-catalog__heading {
 	width: 100%;
 	text-align: center;
 	background: var(--light-green);
 	color: white;
 }
 
-.refer-catalog {
+.contents__refer--catalog {
 	margin-top: 40px;
 }
 
 /*----- common.html -----*/
 
-header .key-visual.common {
+.header__key-visual--common {
 	background: url('../images/visual_img_04.jpg');
 }
 
-.common h3 {
+.desctiption__header {
 	margin-left: -20px;
+	padding-left: 20px;
+	background: url('../images/h3_img.gif') no-repeat 0 4px;
 	display: flex;
 	align-items: center;
 }
 
-.common dt {
+.desctiption__keyword {
 	color: var(--dark-green);
 	font-size: 20px;
 	border-bottom: 2px dotted var(--dark-green);
 }
 
-.common dd {
+.desctiption__desctiption {
 	margin-bottom: 20px;
 }
 
@@ -296,21 +311,21 @@ header .key-visual.common {
 
 /*----- contact.html -----*/
 
-header .key-visual.contact {
+.header__key-visual--contact {
 	background: url('../images/visual_img_05.jpg');
 }
 
-.contact form {
+.contact {
 	border: 1px solid var(--dark-green);
 }
 
-.contact  dl {
+.contact-container {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	align-items: center;
 }
 
-.contact dl dt {
+.contact__keyword {
 	padding: 8px;
 	height: 100%;
 	border-bottom: 1px solid white;
@@ -322,53 +337,53 @@ header .key-visual.contact {
 	justify-content: end;
 }
 
-.contact dl dt:nth-child(13) {
+.contact__keyword:nth-child(13) {
 	/* 最後尾のdtのみ色を変える */
 	border-bottom: 1px solid var(--dark-green);
 }
 
-.contact dl dd {
+.contact__contents {
 	padding: 8px 16px;
 	border-bottom: 1px solid var(--dark-green);
 }
 
-.contact dl dd .email-line-1st {
+.contact__contents .email-line-1st {
 	margin-bottom: 8px;
 }
 
-.contact input[type=text],
-.contact input[type=email] {
+.contact__text,
+.contact__email {
 	width: 400px;
 }
 
-.contact textarea {
+.contact__textarea {
 	width: 400px;
 }
 
-.contact .re-entry {
+.re-entry {
 	margin-left: 16px;
 	color: red;
 	font-weight: normal;
 }
 
-.contact ul {
+.contact__list {
 	padding: 0;
 	display: flex;
 	gap: 24px;
 }
 
-.contact .form-functions {
+.contact__form-functions {
 	padding: 16px;
 	text-align: center;
 }
 
-.contact .form-functions input[type=submit],
-.contact .form-functions input[type=reset] {
+.contact__form-functions input[type=submit],
+.contact__form-functions input[type=reset] {
 	padding: 4px 32px;
 }
 
-aside.green-tea-plantation {
-	width: 244px;
+.green-tea-plantation {
+	flex: 180px 0 0;
 	height: auto;
 	background: url('../images/aside_bg.jpg');
 	background-size: cover;

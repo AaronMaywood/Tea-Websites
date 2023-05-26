@@ -14,50 +14,49 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header>
-			<div class="line-1st">
-				<h1><img src="images/logo_mark.png" width="40" height="40" alt="">日本茶 紅茶 中国茶</h1>
+		<header class="header">
+			<div class="header__line-1st">
+				<h1 class="header__logo"><img src="images/logo_mark.png" width="40" height="40" alt="">日本茶 紅茶 中国茶</h1>
 				<nav>
-					<ul>
-						<li><a href="index.html">お茶の始まり</a><div class="vertical-rule"></div></li>
-						<li><a href="tool.html">お茶と茶器</a><div class="vertical-rule"></div></li>
-						<li><a href="catalog.html">お茶カタログ</a><div class="vertical-rule"></div></li>
-						<li><a href="common.html">お茶の常識</a><div class="vertical-rule"></div></li>
-						<li><a class="current" href="contact.html">お問い合わせ</a></li>
+					<ul class="nav">
+						<li class="nav__item"><a href="index.html">お茶の始まり</a><div class="nav__vertical-rule"></div></li>
+						<li class="nav__item"><a href="tool.html">お茶と茶器</a><div class="nav__vertical-rule"></div></li>
+						<li class="nav__item"><a href="catalog.html">お茶カタログ</a><div class="nav__vertical-rule"></div></li>
+						<li class="nav__item"><a href="common.html">お茶の常識</a><div class="nav__vertical-rule"></div></li>
+						<li class="nav__item nav__item--current"><a href="contact.html">お問い合わせ</a></li>
 					</ul>
 				</nav>
 			</div>
-			<div class="key-visual contact">
-			</div>
+			<div class="header__key-visual header__key-visual--contact"></div>
 		</header>
-		<div class="main-layout-col2">
-			<main class="contact">
-				<section>
+		<div class="contents-area">
+			<main>
+				<section class="contents-area__contents contents">
 					<header>
-						<h2><img src="images/h2_img.png" width="48" height="27" alt="">お問い合わせ</h2>
+						<h2 class="contents__header heading">お問い合わせ</h2>
 						<p>ご意見・お問い合わせを記入して頂いた方の中から、ご希望の方全員に毎月15日発行のメールマガジン「お茶の季節」をお送りします。</p>
 					</header>
-					<form>
-						<dl>
-							<dt>お名前</dt>
-							<dd><input type="text" placeholder="例：山田　太郎"></dd>
-							<dt>メールアドレス</dt>
-							<dd>
+					<form class="contact">
+						<dl class="contact-container">
+							<dt class="contact__keyword">お名前</dt>
+							<dd class="contact__contents"><input class="contact__text" type="text" placeholder="例：山田　太郎"></dd>
+							<dt class="contact__keyword">メールアドレス</dt>
+							<dd class="contact__contents">
 								<div class="email-line-1st">
-									<input type="email"><br>
+									<input class="contact__email" type="email"><br>
 								</div>
-								<input type="email"><strong class="re-entry">※再入力</strong>
+								<input class="contact__email" type="email"><strong class="re-entry">※再入力</strong>
 							</dd>
-							<dt>性別</dt>
-							<dd>
-								<ul>
+							<dt class="contact__keyword">性別</dt>
+							<dd class="contact__contents">
+								<ul class="contact__list">
 									<li><label><input type="radio" name="sex"> 男性</label></li>
 									<li><label><input type="radio" name="sex"> 女性</label></li>
 									<li><label><input type="radio" name="sex"> 無回答</label></li>
 								</ul>
 							</dd>
-							<dt>都道府県</dt>
-							<dd>
+							<dt class="contact__keyword">都道府県</dt>
+							<dd class="contact__contents">
 								<select>
 									<option>ここから選択してください</option>
 									<option value="sapporo">札幌</option>
@@ -66,27 +65,27 @@
 									<option value="kagoshima">鹿児島</option>
 								</select>
 							</dd>
-							<dt>好きなお茶</dt>
-							<dd>
-								<ul>
+							<dt class="contact__keyword">好きなお茶</dt>
+							<dd class="contact__contents">
+								<ul class="contact__list">
 									<li><label><input type="checkbox" name="favorite-tea"> 日本茶</label></li>
 									<li><label><input type="checkbox" name="favorite-tea"> 紅茶</label></li>
 									<li><label><input type="checkbox" name="favorite-tea"> 中国茶</label></li>
 								</ul>
 							</dd>
-							<dt>メルマガを希望する</dt>
-							<dd>
-								<ul>
+							<dt class="contact__keyword">メルマガを希望する</dt>
+							<dd class="contact__contents">
+								<ul class="contact__list">
 									<li><label><input type="radio" name="newsletter" checked> 希望する</label><br></li>
 									<li><label><input type="radio" name="newsletter"> 希望しない</label><br></li>
 								</ul>
 							</dd>
-							<dt>ご意見・お問い合わせ</dt>
-							<dd>
-								<textarea rows="6" placeholder="ご意見・お問い合せをこちらにご記入お願いします。"></textarea>
+							<dt class="contact__keyword">ご意見・お問い合わせ</dt>
+							<dd class="contact__contents">
+								<textarea class="contact__textarea" rows="6" placeholder="ご意見・お問い合せをこちらにご記入お願いします。"></textarea>
 							</dd>
 						</dl>
-						<div class="form-functions">
+						<div class="contact__form-functions">
 							<input type="submit" value="送信ボタン">
 							<input type="reset" value="リセットボタン">
 						</div>
@@ -95,24 +94,21 @@
 			</main>
 			<aside class="green-tea-plantation"></aside>
 		</div>
-		<footer>
-			<div class="line-1st">
-				<p class="sitename"><img src="images/logo_mark_w.svg" width="40" height="40" alt="">日本茶 紅茶 中国茶</p>
-				<ul>
+		<footer class="footer">
+			<div class="footer__line-1st">
+				<p class="footer__sitename"><img src="images/logo_mark_w.svg" width="40" height="40" alt="">日本茶 紅茶 中国茶</p>
+				<ul class="footer__nav">
 					<li><a href="#">全日本お茶組合</a></li>
 					<li><a href="#">組合規約</a></li>
 					<li><a href="#">アクセス</a></li>
 					<li><a href="#">ブログ</a></li>
 				</ul>
 			</div>
-			<address>
-				<span class="tel"><img src="images/free_dial.png" width="22" height="14" alt="フリーダイヤル">0120-000-0000</span>
+			<address class="footer__address">
+				<span class="footer__tel"><img src="images/free_dial.png" width="22" height="14" alt="フリーダイヤル">0120-000-0000</span>
 				〒160-0021 東京都新宿区歌舞伎町100-10-1<br>全日本お茶組合本部
 			</address>
-			<p class="copyright"><small>© 2019 All Japan tea union.</small></p>
+			<p class="footer__copyright"><small>© 2019 All Japan tea union.</small></p>
 		</footer>
 	</body>
 </html>
-
-
-
