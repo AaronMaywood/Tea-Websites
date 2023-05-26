@@ -148,6 +148,9 @@ footer .sitename {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	height: 90px;
+	overflow: auto;
+
 }
 
 .info__item {
