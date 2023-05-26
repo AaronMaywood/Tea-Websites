@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* 共通基盤(ベーススタイル) */
+
 /*
 CSS カスタムプロパティを使用してよく使う値を定義
 https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
@@ -44,6 +46,8 @@ header nav,
 footer .sitename {
 	font-family: 'Noto Serif JP', serif;
 }
+
+/* ベーススタイルここまで */
 
 header .line-1st {
 	padding: 20px 40px;
@@ -96,7 +100,9 @@ main > section {
 
 main h2 {
 	margin-left: -50px;
+	padding-left: 50px;
 	margin-bottom: 10px;
+	background: url('../images/h2_img.png') no-repeat 0 5px;
 	display: flex;
 	align-items: center;
 }
@@ -208,6 +214,8 @@ main header {
 
 .card-tool h3 {
 	margin-left: -20px;
+	padding-left: 20px;
+	background: url('../images/h3_img.gif') no-repeat 0 4px;
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -271,6 +279,8 @@ header .key-visual.common {
 
 .common h3 {
 	margin-left: -20px;
+	padding-left: 20px;
+	background: url('../images/h3_img.gif') no-repeat 0 4px;
 	display: flex;
 	align-items: center;
 }
