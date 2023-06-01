@@ -269,6 +269,8 @@ MEMO
 }
 
 .card-catalog {
+	box-sizing: content-box;
+	padding-right: 10px;
 	flex: 230px 0 0;
 	display: flex;
 	flex-direction: column;
