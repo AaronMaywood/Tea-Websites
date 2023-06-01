@@ -64,21 +64,14 @@ header .line-1st h1 {
 
 header .line-1st ul {
 	display: flex;
-	justify-content: space-between;
-	gap: 12px;
 }
 
-.line-1st nav li {
-	display: flex;
-	align-items: center;
-	gap: 12px;
+.line-1st nav li:not(:last-child) {
+	border-right: 1px solid var(--dark-green);
 }
 
-.line-1st nav .vertical-rule {
-	margin-top: 3px;
-	width: 1px;
-	height: 20px;
-	border-left: 1px solid var(--dark-green);
+.line-1st nav li a {
+	padding: 0 16px;
 }
 
 header .key-visual {
@@ -249,17 +242,17 @@ header .key-visual.catalog {
 	flex-wrap: wrap;
 }
 
-.showcase .vertical-rule {
-	width: 1px;
-	height: 450px;
-	border-left: 1px solid #ddd;
-}
-
 .card-catalog {
+	box-sizing: content-box;
 	flex: 230px 0 0;
+	padding-right: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.card-catalog:not(:nth-child(3)) {
+	border-right: 1px solid #ddd;
 }
 
 .card-catalog h3 {
