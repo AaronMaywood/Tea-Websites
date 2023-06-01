@@ -249,7 +249,7 @@ MEMO
 }
 
 .card-tool__image {
-	box-sizing: content-box;	/* reset.css の box-sizing: border-box; を上書き */
+	box-sizing: content-box;	/* reset.css の box-sizing: border-box; を上書き↓のpaddingを入れることによって内容幅が小さくなるのを防いでいる */
 	padding: 20px;
 	padding-bottom: 40px;
 	border: 1px solid black;
@@ -269,8 +269,8 @@ MEMO
 }
 
 .card-catalog {
-	box-sizing: content-box;
-	padding-right: 10px;
+	box-sizing: content-box;	/* reset.css の box-sizing: border-box; を上書き↓のpaddingを入れることによって内容幅が小さくなるのを防いでいる */
+	padding-right: 10px;		/* right側にある縦線の内側に（縦線のさらに右側にくるgap の間隔に合わせて）padding 幅をもうけて見た目を調整している */
 	flex: 230px 0 0;
 	display: flex;
 	flex-direction: column;
