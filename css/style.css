@@ -59,8 +59,6 @@ footer .sitename {
 
 .nav {
 	display: flex;
-	justify-content: space-between;
-	gap: 12px;
 }
 
 .nav__item {
@@ -69,16 +67,25 @@ footer .sitename {
 	gap: 12px;
 }
 
+.nav__link {
+	/* a要素にpaddingをもたせることにより、paddingの空間もクリック可能になる */
+	padding: 0 16px;
+}
+
+/*
+MEMO
+グローバルナビのアイテム間の縦線をborder-rightにて敷いている。
+そのため最後のアイテムだけはborder-rightを敷かないように :not(:last-child) で除外している。
+現在のCSSセレクターには「アイテムの間」を示すものがないため、この手法を良く利用する。
+（将来においてはズバリ「間」を表現する :gap() のような名前の疑似クラスなどが追加されることを期待したい）
+*/
+.nav__item:not(:last-child) {
+	border-right: 1px solid var(--dark-green);
+}
+
 .nav__item--current a {
 	text-decoration: underline;
 	color: #b27616;
-}
-
-.nav__vertical-rule {
-	margin-top: 3px;
-	width: 1px;
-	height: 20px;
-	border-left: 1px solid var(--dark-green);
 }
 
 .header__key-visual {
@@ -261,17 +268,22 @@ footer .sitename {
 	flex-wrap: wrap;
 }
 
-.showcase__vertical-rule {
-	width: 1px;
-	height: 450px;
-	border-left: 1px solid #ddd;
-}
-
 .card-catalog {
 	flex: 230px 0 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+/*
+MEMO
+:nth-child(3) は改行位置を示す
+現在のCSSのセレクターにずばり改行位置にマッチするセレクターがないため、人間が数を数えて :nth-child(3) と指定するしかない
+この方法では、レスポンシブ時に改行位置が代わるのに自動的に応じることができない泥臭いコーディングとなってしまう
+（将来においては :wrap() などの名前で改行位置を表す疑似クラスが登場することを期待したい）
+*/
+.card-catalog:not(:nth-child(3)) {
+	border-right: 1px solid #ddd;
 }
 
 .card-catalog__heading {
