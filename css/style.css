@@ -92,9 +92,11 @@ header .line-1st nav li:last-child {
 }
 
 header .key-visual {
-	padding: 20px 80px 100px;
+	padding: 40px 90px;
+	height: 220px;
 	background: url('../images/visual_img_01.jpg');
 	color: white;
+	font-size: 20px;
 }
 
 .main-layout-col2 {
@@ -217,6 +219,7 @@ footer .copyright {
 /*----- tool.html -----*/
 
 header .key-visual.tool {
+	height: 160px;
 	background: url('../images/visual_img_02.jpg');
 }
 
@@ -250,6 +253,7 @@ main header {
 /*----- catalog.html -----*/
 
 header .key-visual.catalog {
+	height: 160px;
 	background: url('../images/visual_img_03.jpg');
 }
 
@@ -286,6 +290,7 @@ header .key-visual.catalog {
 /*----- common.html -----*/
 
 header .key-visual.common {
+	height: 160px;
 	background: url('../images/visual_img_04.jpg');
 }
 
@@ -319,6 +324,7 @@ header .key-visual.common {
 /*----- contact.html -----*/
 
 header .key-visual.contact {
+	height: 160px;
 	background: url('../images/visual_img_05.jpg');
 }
 
@@ -395,4 +401,3 @@ aside.green-tea-plantation {
 	background: url('../images/aside_bg.jpg');
 	background-size: cover;
 }
-
