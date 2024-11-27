@@ -17,7 +17,12 @@ a {
 }
 
 a.current {
-	text-decoration: underline;
+	border-bottom: 2px solid #b27616;
+	color: #b27616;
+}
+
+a:hover {
+	border-bottom: 2px solid #b27616;
 	color: #b27616;
 }
 
@@ -59,19 +64,31 @@ header .line-1st {
 header .line-1st h1 {
 	display: flex;
 	align-items: center;
-	gap: 16px;
+	gap: 5px;
+	font-size: 28px;
+}
+
+header .line-1st h1 img {
+	position: relative;
+	top: 2px;
 }
 
 header .line-1st ul {
 	display: flex;
+	margin-top: 10px;
 }
 
-.line-1st nav li:not(:last-child) {
+header .line-1st ul li {
+	height: 26px;
+	padding: 0 20px;
+}
+
+header .line-1st nav li:not(:last-child) {
 	border-right: 1px solid var(--dark-green);
 }
 
-.line-1st nav li a {
-	padding: 0 16px;
+header .line-1st nav li:last-child {
+	padding-right: 0;
 }
 
 header .key-visual {
